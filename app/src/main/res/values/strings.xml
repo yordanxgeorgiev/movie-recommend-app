@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">GrooveyMoovey</string>
+
+    <string name="title_activity_movie_info">MovieInfoActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="tmdb_image_prefix">https://image.tmdb.org/t/p/w500</string>
+    <string name="tmdb_api_key">b5d1124be4cbf665b10154bd9a4a96f5</string>
+
+    <string name="alreadySeen_sharedPrefs">alreadySeen</string>
+    <string name="alreadySeen_movieTitle">movieTitle</string>
+
+    <string name="watchlist_sharedPrefs">watchlistPrefs</string>
+    <string name="watchlist_key">watchlist</string>
+
+    <string name="options_sharedPrefs">options</string>
+
+    <string name="min_rating">7.2</string>
+    <string name="min_votes">1000</string>
+
+</resources>

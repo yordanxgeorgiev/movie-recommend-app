@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_main">
+
+    <Button
+        android:id="@+id/btn_recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:text="Go" />
+
+    <ImageButton
+        android:id="@+id/btn_settings"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="26dp"
+        android:layout_toEndOf="@+id/btn_recommend"
+        android:layout_toRightOf="@+id/btn_recommend"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_settings" />
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView_searchResults"
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="false"
+        android:layout_marginStart="-6dp"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/scrollView_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"></LinearLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/btn_watchlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="26dp"
+        android:layout_toLeftOf="@id/btn_recommend"
+        android:text="Watchlist" />
+
+</RelativeLayout>
