@@ -134,8 +134,11 @@ public class Activity_movieInfo extends AppCompatActivity {
                     load(mp.getMovieImageURL())
                     .into(movieImage);
 
+            final String genres = "\t(" + mp.getMovieGenres() + ")";
+
             TextView movieTitle = findViewById(R.id.movie_title);
             movieTitle.setText(mp.getMovieTitle());
+            movieTitle.append(genres);
 
             TextView movieDescription = findViewById(R.id.movie_description);
             movieDescription.setText(mp.getMovieOverview());
@@ -260,13 +263,14 @@ public class Activity_movieInfo extends AppCompatActivity {
     {
         final CheckBox cb_alreadySeen = findViewById(R.id.cb_alreadySeen);
         SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.alreadySeen_sharedPrefs), Context.MODE_PRIVATE);
-        String alreadySeen = sharedPreferences.getString(getString(R.string.alreadySeen_movieTitle), null);
+        String alreadySeen = sharedPreferences.getString(movieTitle, null);
         if(alreadySeen == null) cb_alreadySeen.setChecked(false);
         else cb_alreadySeen.setChecked(true);
 
         cb_alreadySeen.setOnCheckedChangeListener(new CheckBox.OnCheckedChangeListener(){
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                System.out.println("adadad");
                 SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.alreadySeen_sharedPrefs), Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 if(cb_alreadySeen.isChecked())
